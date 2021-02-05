@@ -1,5 +1,6 @@
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 class Person2 {
     private String name ;
@@ -28,7 +29,7 @@ class Person2 {
 }
 public class Test6 {
     public static void main(String[] args) throws
-            Exception {
+             ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         Class<?> cls = Class.forName("Person2");
 
         // 任何时候调⽤用类中的普通⽅方法都必须有实例例化对象
